@@ -120,14 +120,24 @@ section {
 	}
 	.more {
 		position: absolute;
-		width: 50vw;
-		left: 25vw;
 		height: 100%;
 		z-index: 12;
 		cursor: inherit;
 		@media screen and (max-width: 768px) {
 			display: none;
 		}
+	}
+	.prev, .next {
+		height: 100%;
+		width: 25%;
+		position: absolute;
+		z-index: 13;
+	}
+	.prev {
+		left: 0;
+	}
+	.next {
+		right: 0;
 	}
 	.left, .right {
 		display: inline-block;

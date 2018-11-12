@@ -29,7 +29,7 @@ export function canvasDraw(myCanvas) {
           canvasX = e.pageX - myCanvas.offsetLeft;
           canvasY = e.pageY - myCanvas.offsetTop;
           ctx.lineTo(canvasX, canvasY);
-          ctx.strokeStyle = '#000';
+          ctx.strokeStyle = '#fff';
           ctx.stroke();
         }
       })
@@ -76,9 +76,13 @@ export function canvasDraw(myCanvas) {
   myCanvas.addEventListener('touchstart', draw.start, false);
   myCanvas.addEventListener('touchend', draw.end, false);
   myCanvas.addEventListener('touchmove', draw.move, false);
+  myCanvas.addEventListener('clearRect', () => {
+    ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+  });
 
   // Disable Page Move
   document.body.addEventListener('touchmove', function (evt) {
     evt.preventDefault();
   }, false);
+
 }

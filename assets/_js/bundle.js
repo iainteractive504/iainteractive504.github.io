@@ -1,9 +1,9 @@
-// import {canvasDraw} from './draw.js';
+import {canvasDraw} from './draw.js';
 
 $(document).ready(function () {
-  // $('canvas').each(function() {
-  //   canvasDraw(this);
-  // });
+  $('canvas').each(function() {
+    canvasDraw(this);
+  });
 
   // SMOOTH PAGE LOAD
   $('body').removeClass('fade-out');
@@ -65,14 +65,14 @@ $(document).ready(function () {
   });
 
   // LEFT PREV CLICK
-  $('.left').click(() => {
+  $('.prev').click(() => {
     if (!animating && isDesktop()) {
       toggleSlide('previous');
     }
   });
 
   // RIGHT NEXT CLICK
-  $('.right').click(() => {
+  $('.next').click(() => {
     if (!animating && isDesktop()) {
       toggleSlide('next');
     }
