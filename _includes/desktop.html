@@ -1,3 +1,13 @@
+
+<div class="preloader-wrap">
+		<div class="percentage" id="precent"></div>
+		<div class="loader">
+			<div class="trackbar">
+				<div class="loadbar"></div>
+			</div>
+		</div>
+</div>
+
 {% assign sorted = site.posts | sort: 'sort_order' %}
 
 {% for post in sorted %}
@@ -6,10 +16,10 @@
 <section id="intro">
 	<div class="container">
 		<div class="left" style="background-color: {{post.intro_background}};">
-			<img src="{{post.intro_image_left}}">
+			<!-- <img src="{{post.intro_image_left}}"> -->
 		</div>
 		<div class="right" style="background-color: {{post.intro_background}};">
-			<img src="{{post.intro_image_right}}">
+			<!-- <img src="{{post.intro_image_right}}"> -->
 		</div>
 	</div>
 </section>

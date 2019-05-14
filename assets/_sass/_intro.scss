@@ -4,9 +4,13 @@
 	&.active {
 		z-index: 12 !important;
 	}
+	h2 {
+		letter-spacing: 1px;
+		color: white;
+		padding: 0 5px;
+	}
 	img {
 		max-width: 750px;
-		opacity: 0;
 		transition: 1s ease-in;
 	}
     .right {
